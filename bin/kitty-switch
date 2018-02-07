@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# vim: syntax=ruby
+
+dest = ARGV.first.to_sym
+sizes = {
+  monitor: '9.0',
+  retina: '14.0'
+}
+
+conf = nil
+if sizes[dest]
+  Dir.chdir(File.dirname(__FILE__)) do 
+    File.open("../kitty.conf", 'r') { |f| conf = f.read.split("\n") }
+    conf[conf.length - 1] = "font_size #{sizes[dest]}"
+    File.open("../kitty.conf", 'w') do |f| 
+      conf.each { |line| f << line << "\n" }
+    end
+  end
+end

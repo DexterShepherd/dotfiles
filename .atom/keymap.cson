@@ -1,0 +1,39 @@
+#unset annoying defaults
+'atom-text-editor':
+  'ctrl-k': 'unmap!'
+
+'.platform-darwin .command-palette atom-text-editor':
+  'ctrl-k': 'core:move-up'
+  'ctrl-j': 'core:move-down'
+
+'.fuzzy-finder atom-text-editor[mini]':
+  'ctrl-k': 'core:move-up'
+  'ctrl-j': 'core:move-down'
+
+'atom-text-editor.vim-mode-plus:not(.insert-mode)':
+  'ctrl-h': 'window:focus-pane-on-left'
+  'ctrl-l': 'window:focus-pane-on-right'
+  'ctrl-j': 'window:focus-pane-below'
+  'ctrl-k': 'window:focus-pane-above'
+  'ctrl-n': 'pane:show-next-item'
+  'ctrl-b': 'pane:show-previous-item'
+
+  'space': 'vim-mode-plus:search'
+
+  ': w enter': 'core:save'
+  ': q enter': 'pane:close'
+
+  ', t': 'rspec:run'
+  ', s': 'rspec:run-for-line'
+  ', l': 'rspec:run-last'
+
+'atom-text-editor.vim-mode-plus:not(.normal-mode):not(.visual-mode)':
+  'j k': 'vim-mode-plus:activate-normal-mode'
+
+#cycle through completion with home row
+'atom-text-editor.autocomplete-active':
+  'ctrl-j': 'core:move-down'
+  'ctrl-k': 'core:move-up'
+
+'.platform-darwin':
+  'ctrl-p': 'fuzzy-finder:toggle-file-finder'

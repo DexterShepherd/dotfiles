@@ -1,0 +1,36 @@
+# useful aliases and shortcuts
+
+# typo and shortcuts
+alias ls="ls -Gp"
+alias l="ls -Gp"
+alias s="ls -Gp"
+# alias vi="nvim"
+# alias vim="nvim"
+alias sbash=". ~/.bash_profile"
+alias bs='browser-sync start --server --files "*.js, *.html, *.css", "*.scss"'
+alias ns='stream-adventure'
+alias frames_ssh="ssh -i '500-frames.pem' ubuntu@ec2-35-161-77-18.us-west-2.compute.amazonaws.com"
+alias tmux="env TERM=xterm-256color tmux -2"
+alias tag="ctags -R --exclude=.git --exclude=node_modules --exclude=vendor --exclude=tmp"
+alias src='. ~/dotfiles/install.sh'
+
+alias als='vim ~/dotfiles/sys/.alias'
+
+
+
+#spotify
+alias ss='spotify pause'
+alias sp='spotify play'
+
+# git
+alias master='git checkout master'
+alias develop='git checkout develop'
+alias feature="git checkout $FEATURE"
+
+# directories and files
+alias qa="cd $QA_PATH"
+alias api="cd $API_PATH"
+alias client="cd $API_CLIENT_PATH"
+alias web="cd $WEB_PATH"
+alias dot="cd $DOTFILES_PATH"
+alias vimrc="vim $VIMRC_PATH"

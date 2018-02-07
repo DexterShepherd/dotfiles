@@ -1,0 +1,15 @@
+set completion-ignore-case on
+set page-completions off
+set completion-query-items 200
+
+set skip-completed-text on
+
+set editing-mode vi
+set keymap vi
+
+set bell-style none
+
+$if mode=vi
+  set keymap vi-insert
+  "jk": vi-movement-mode
+$endif

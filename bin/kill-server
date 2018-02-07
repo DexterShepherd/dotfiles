@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+# vim: syntax=ruby
+
+pids = `lsof -wni tcp:3000`
+pid_line = pids.split("\n")[1]
+puts "Kill #{pid_line} ? (y/N)"
+`Kill -9 #{pid_line.split[1]}` if gets.chomp == 'y'
