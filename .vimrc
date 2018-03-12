@@ -24,7 +24,6 @@ Plug 'christoomey/vim-tmux-navigator'
 Plug 'tpope/vim-repeat'
 Plug 'digitaltoad/vim-pug'
 Plug 'posva/vim-vue'
-Plug 'plasticboy/vim-markdown'
 Plug 'junegunn/goyo.vim'
 Plug 'jamshedVesuna/vim-markdown-preview'
 Plug 'xolox/vim-misc'
@@ -34,15 +33,15 @@ Plug 'chriskempson/base16-vim'
 Plug 'mattn/emmet-vim'
 Plug 'jlanzarotta/bufexplorer'
 Plug 'leafgarland/typescript-vim'
-" Plug 'w0rp/ale'
+Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
-Plug 'JamshedVesuna/vim-markdown-preview'
 " Plug 'tpope/vim-vinegar'
 Plug '~/workspace/open-source/vim-vinegar'
 Plug 'rhysd/vim-grammarous'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
 Plug 'tikhomirov/vim-glsl'
+Plug 'mxw/vim-jsx'
 
 Plug 'ryanoasis/vim-devicons'
 
@@ -242,13 +241,13 @@ nnoremap <leader>b :BufExplorer<CR>
 
 let g:bufExplorerDisableDefaultKeyMapping=1
 
-" let g:ale_lint_on_save = 1
-" let g:ale_lint_on_text_changed = 0
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
 
-" let g:ale_linters = {
-"         \'ruby': [],
-"         \ 'javascript': ['eslint'],
-"         \}
+let g:ale_linters = {
+        \'ruby': [],
+        \ 'javascript': ['eslint'],
+        \}
 let g:lightline = { 'colorscheme': 'seoul256' }
 
 let NERDShowHidden=1
@@ -261,6 +260,7 @@ let g:lightline = {
       \ }
       \ }
 
+
 function! MyFiletype()
   return winwidth(0) > 70 ? (strlen(&filetype) ? &filetype . ' ' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
 endfunction
@@ -269,9 +269,18 @@ function! MyFileformat()
   return winwidth(0) > 70 ? (&fileformat . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 endfunction
 
-autocmd BufRead,BufNewFile *.vue setlocal filetype=javascript
+" autocmd BufRead,BufNewFile *.vue setlocal filetype=javascript
 
-let vim_markdown_preview_github=1
+autocmd BufEnter * ALEDisable
+
 let vim_markdown_preview_hotkey='<C-m>'
 
 " imap <expr> <tab> emmet#expandAbbrIntelligent("\<tab>")
+" let g:user_emmet_leader_key='<Tab>'
+" let g:user_emmet_settings = {
+"   \  'javascript' : {
+"     \      'extends' : 'jsx',
+"     \  },
+"   \}
+
+let g:jsx_ext_required = 0

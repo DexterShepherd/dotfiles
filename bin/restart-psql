@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+# vim: syntax=ruby
+
+`rm /usr/local/var/postgresql/postmaster.pid`

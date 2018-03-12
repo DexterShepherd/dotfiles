@@ -1,0 +1,49 @@
+set nocompatible
+
+set background=dark
+set wildmenu
+set autoindent
+set smartindent
+set backspace=indent,eol,start
+set ignorecase
+set incsearch
+set hlsearch
+set smartcase
+set laststatus=2
+set autoread
+set history=1000
+set splitright "open splits in way that makes sense
+set splitbelow 
+set shiftwidth=2
+set tabstop=2
+set softtabstop=2
+set expandtab
+set smarttab
+set nobackup
+set nowb
+set noswapfile
+set hidden
+set vb
+set foldmethod=indent
+set foldlevel=99
+
+set nonumber
+
+nnoremap j gj
+nnoremap k gk
+
+let mapleader=","
+let maplocalleader=","
+
+inoremap jk <esc>
+
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-h> <C-W>h
+nnoremap <C-l> <C-W>l
+
+nnoremap <space> /
+nnoremap <leader>n :nohlsearch<cr>
+nnoremap <leader>sv :source ~/.vimrc <cr>
+nnoremap <leader>vv :vs ~/.vimrc <cr>
+nnoremap <leader>vh :sp ~/.vimrc <cr>
