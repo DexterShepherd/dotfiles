@@ -22,3 +22,5 @@ BASE16_SHELL=$HOME/.config/base16-shell/
 
 # added by Anaconda3 5.0.1 installer
 export PATH="/anaconda3/bin:$PATH"
+
+tmux source-file ~/.tmux.conf

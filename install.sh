@@ -10,7 +10,6 @@ ln -sfv ~/workspace/dotfiles/.vimrc ~/.vimrc
 ln -sfv ~/workspace/dotfiles/.vim ~/.vim
 ln -sfv ~/workspace/dotfiles/.atom ~/.atom
 ln -sfv ~/workspace/dotfiles/kitty.conf ~/Library/Preferences/kitty/kitty.conf
-
-ln -sfv ~/workspace/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -sfv ~/workspace/dotfiles/.phoenix.js ~/.phoenix.js 
 
 source ~/.bash_profile

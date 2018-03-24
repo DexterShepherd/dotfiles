@@ -35,8 +35,7 @@ Plug 'jlanzarotta/bufexplorer'
 Plug 'leafgarland/typescript-vim'
 Plug 'w0rp/ale'
 Plug 'itchyny/lightline.vim'
-" Plug 'tpope/vim-vinegar'
-Plug '~/workspace/open-source/vim-vinegar'
+Plug 'tpope/vim-vinegar'
 Plug 'rhysd/vim-grammarous'
 Plug 'SirVer/ultisnips'
 Plug 'honza/vim-snippets'
@@ -72,11 +71,10 @@ set nobackup
 set nowb
 set noswapfile
 set hidden
-set vb
+set novb
 set foldmethod=indent
 set foldlevel=99
 " set completeopt+=noinsert
-set nonumber
 
 set ttyfast
 
@@ -208,7 +206,7 @@ set wildignore+=*/.git/*,*/.hg/*,*/.svn/*,*/.DS_Store
 set splitright
 set splitbelow
 set so=7
-set lazyredraw 
+" set lazyredraw 
 set guioptions-=r 
 set guioptions-=R
 set guioptions-=L
